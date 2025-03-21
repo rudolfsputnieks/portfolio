@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+    
+body {
+  background-color: lightyellow;
+}
+
+h1 {
+  color: darkslategrey;
+  font-family: garamond;
+  text-align: center;
+}
+
+h2 {
+  font-family: verdana;
+  font-size: 20px;
+  text-align: center;
+}
+
+ol.a {
+  list-style-type: upper-roman;
+}
+
+img {
+  border-radius: 8px;
+}
+.navbar {
+  margin-bottom: 0;
+  background-color: #81764f;
+  border: 0;
+  font-size: 11px !important;
+  letter-spacing: 4px;
+  opacity: 0.9;
+}
+
+/* Add a gray color to all navbar links */
+.navbar li a, .navbar .navbar-brand {
+  color: #d5d5d5 !important;
+}
+
+/* On hover, the links will turn white */
+.navbar-nav li a:hover {
+  color: #fff !important;
+}
+
+/* The active link */
+.navbar-nav li.active a {
+  color: #fff !important;
+  background-color:#29292c !important;
+}
+
+/* Remove border color from the collapsible button */
+.navbar-default .navbar-toggle {
+  border-color: #29292c;
+}
+
+/* Dropdown */
+.open .dropdown-toggle {
+  color: #fff ;
+  background-color: #555 !important;
+}
+
+/* Dropdown links */
+.dropdown-menu li a {
+  color: #000 !important;
+}
+
+/* On hover, the dropdown links will turn red */
+.dropdown-menu li a:hover {
+  background-color: red !important;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Rūdolfs Putnieks</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#band">GRAFIKAS</a></li>
+        <li><a href="#tour">WORD</a></li>
+        <li><a href="#contact">EXCEL</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<h3>.</h3>
+<h1>PORTFOLIO</h1>
+<h2 id="band"><em>Ko es esmu iemācījies šajā mācību gadā datorikā?</em></h2>
+<ul class="a">
+  <li id="tour" >GRAFIKI</li>
+  <div>Es iemācījos izmantot GIMP</div>
+  <img src="../images/ATTELS.png"  alt="gimp" width="500" height="300" />
+  <div>Kā arī veidot animācijas.</div>
+  <img src="../images/Animacija_pabeigta.gif" alt="gifins" width="500" height="300"/>
+  <li>WORD</li>
+  <div>Es iemācījos pilnvērtīgi izmantot word programmu.</div>
+  <img src="../images/Screenshot (1).png" alt="word" width="500" height="300"/>
+  <li>3D MODEĻI</li>
+  <li>VIDEO</li>
+  <div>Es izveidoju reklāmu savam uzņēmumam - Babyfeet, kā arī paziņojumu, kas mācīja par ergonomiskām darbavietām.</div>
+  <li href="#contact" >EXCEL</li>
+  <div>Es iemācījos izveidot sarežģītas tabulas un formulas excel.</div>
+  <img src="../images/Screenshot (2).png" alt="excel" width="500" height="300"/>
+</ul>
+
+</body>
+</html>
+
