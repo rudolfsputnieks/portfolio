@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Gaidot dzimšanas dienu</title>
+ 
+</head>
+<body>
+    <h1>Gaidot dzimšanas dienu..</h1>
+    <hr>
+    <form>
+        <p> Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena </P>
+        <label>Gads   : <input type="text" id="gads" placeholder="ievadi gadu"></label><br>
+        <label>Mēnesis: <input type="text" id="menesis" placeholder="ievadi mēnesi"></label><br>
+        <label>Diena : <input type="text" id="diena" placeholder="ievadi datumu"></label><br><br>
+        <button type="button" onclick="dienas()">Aprēķināt dienu skaitu līdz dzimšanas dienai</button>
+    </form>
+    <p id="rezultats">Līdz svētkiem atlikušas: </p>   
+    
+    <script>
+        function dienas() {
+            let today = new Date();
+            let gads = parseInt(document.getElementById("gads").value);
+            let menesis = parseInt(document.getElementById("menesis").value) - 1;
+            let diena = parseInt(document.getElementById("diena").value);
+
+            let birthday = new Date(gads, menesis, diena);
+            let diff = birthday - today;
+
+            if (diff < 0) {
+                birthday.setFullYear(birthday.getFullYear() + 1);
+                diff = birthday - today;
+            }
+
+            let daysLeft = Math.ceil(diff / (1000 * 60 * 60 * 24));
+            document.getElementById("rezultats").innerText = "Līdz svētkiem atlikušas " + daysLeft + " dienas!";
+        }
+    </script>
+    <h3> CITAS WEB LAPAS </h3>
+  <a href="skola.html" > skola.html </a><br> 
+  <a href="otrais.html" > otrais.html </a><br> 
+  <a href="mervienibas.html" > mervienibas.html </a><br> 
+  <a href="index.html" > index.html </a><br> 
+</body>
+</html> 
