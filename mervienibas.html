@@ -5,8 +5,73 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Informācijas daudzuma mērvienības</title>
 <style>
-        body { background-color: rgb(220,220,0); }
+        body { background-image: url('images/cipari.jpg')}
         form { font-size: 20px; }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 20px;
+  
+  background-color: rgb(220,220,0);
+
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 </style>
 <script>
         function convert() {
@@ -18,6 +83,7 @@
 </head>
 <body>
 <h1>Informācijas daudzuma mērvienības</h1>
+<nav>
 <form>
         GB: <input type="text" id="gb"> <br>
         Izteikt megabaitos: <input type="text" id="mb" readonly> MB<br>
@@ -25,6 +91,7 @@
 <button type="button" onclick="convert()">Pārvērst uz MB</button>
 <button type="button" onclick="convert()">Pārvērst uz Mib</button>
 </form>
+</nav>
 <h3> CITAS WEB LAPAS </h3>
   <a href="dzd.html" > dzd.html </a><br> 
   <a href="skola.html" > skola.html </a><br> 
